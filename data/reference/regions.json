@@ -1,0 +1,13 @@
+{
+  "New England": ["CT", "ME", "MA", "NH", "RI", "VT"],
+  "Mid-Atlantic": ["NJ", "NY", "PA"],
+  "Southeast": ["AL", "FL", "GA", "KY", "MS", "NC", "SC", "TN", "VA", "WV"],
+  "Midwest": ["IL", "IN", "IA", "MI", "MN", "MO", "OH", "WI"],
+  "Great Plains": ["KS", "NE", "ND", "SD"],
+  "Southwest": ["AZ", "NM", "OK", "TX"],
+  "Mountain West": ["CO", "ID", "MT", "UT", "WY", "NV"],
+  "Pacific West": ["CA", "OR", "WA"],
+  "Alaska": ["AK"],
+  "Hawaii": ["HI"],
+  "Territories": ["PR", "VI", "GU", "AS", "MP"]
+}
