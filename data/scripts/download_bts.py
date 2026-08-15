@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import sys
 import time
+from datetime import datetime
 from pathlib import Path
 
 import httpx
@@ -29,7 +30,7 @@ from backend.config import settings, RAW_DIR, PROCESSED_DIR
 
 SODA_ENDPOINT = "https://data.bts.gov/resource/r495-tyji.json"
 PAGE_SIZE = 50000
-CURRENT_YEAR = 2026
+CURRENT_YEAR = datetime.now().year
 
 
 def download_year(year: int, timeout: int) -> pd.DataFrame | None:

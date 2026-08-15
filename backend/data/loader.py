@@ -18,9 +18,12 @@ def load_t100_data() -> pd.DataFrame:
 
     parquet_files = sorted(PROCESSED_DIR.glob("t100_*.parquet"))
     if parquet_files:
-        frames = [pd.read_parquet(f) for f in parquet_files]
-        _t100_cache = pd.concat(frames, ignore_index=True)
-        return _t100_cache
+        try:
+            frames = [pd.read_parquet(f) for f in parquet_files]
+            _t100_cache = pd.concat(frames, ignore_index=True)
+            return _t100_cache
+        except ImportError:
+            pass
 
     csv_files = sorted(RAW_DIR.glob("t100_*.csv"))
     if csv_files:
@@ -86,9 +89,12 @@ def load_ontime_data() -> Optional[pd.DataFrame]:
 
     parquet_files = sorted(PROCESSED_DIR.glob("ontime_*.parquet"))
     if parquet_files:
-        frames = [pd.read_parquet(f) for f in parquet_files]
-        _ontime_cache = pd.concat(frames, ignore_index=True)
-        return _ontime_cache
+        try:
+            frames = [pd.read_parquet(f) for f in parquet_files]
+            _ontime_cache = pd.concat(frames, ignore_index=True)
+            return _ontime_cache
+        except ImportError:
+            pass
 
     csv_files = sorted(RAW_DIR.glob("ontime_*.csv"))
     if csv_files:
